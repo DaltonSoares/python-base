@@ -15,12 +15,12 @@ Execução:
     ou
     ./hello.py
 """
+# Dunder é uma palavra que começa com dois _ e termina com dois _
 __version__ = "0.0.1"
 __author__ = "Dalton Augusto Soares"
 __license__ = "Unlicense"
 
-# Dunder é uma palavra que começa com dois _ e termina com dois _
-
+msg = "Hello, World!"
 
 # Este programa imprime Hello World
-print("Hello, World!")
+print(msg)
