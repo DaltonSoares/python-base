@@ -39,4 +39,6 @@ elif current_language == "en_US":
 
 
 # Este programa imprime Hello World
+print(current_language)
 print(msg)
+

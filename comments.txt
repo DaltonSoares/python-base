@@ -1,0 +1,63 @@
+SHEBANG
+#!/usr/bin/python ou
+#!/usr/bin/env python3 
+Informa o terminal que aquele programa roda com o Python3 da 
+env em execução, esta forma é possivel omitir o interpretador e executar o
+ script diretamente pelo seu nome.
+
+COMENTÁRIO MULTI LINHAS
+É uma boa prática adicionar o comentário nas primeiras linhas explicando o
+objetivo do script e provendo documentação para o usuário.
+
+    Exemplo de comentário multi linha:
+    """Hello World Multi Linguas.
+
+    Dependendo da lingua configura no ambiente o programa exibe a mensagem
+    correspondente.
+
+    Como usar:
+
+    Tenha a variavel LANG devidamente configurada ex:
+
+        export LANG=pt_BR
+
+    Execução:
+        python hello.py
+        ou
+        ./hello.py
+    """
+
+DUNDER
+São variáveis de metadados que iniciam e terminam com dois _
+    Exemplo:
+    __version__ = "0.0.1"
+    __author__ = "Dalton Augusto Soares"
+    __license__ = "Unlicense"
+
+IMPORT MÓDULO
+Usei o import do módulo os o que permite interagir com o sistema operacional.
+    Exemplo:
+    current_language = os.getenv("LANG", "en_US")
+    os.getenv("LANG", "en_US") busca pela variável de ambiente LANG, caso não
+    encontre usa en_US como padrão.
+    Tem o mesmo resultado da execução de env | grep LANG no terminal linux.
+    No windows não consegui recuperar o LANG com o módulo os, utilizei o locate
+
+FATIAMENTO DE TEXTO
+Utilizado o [:5] para recuperar os 5 primeiros caractéres do texto.
+    Exemplo:
+    current_language = os.getenv("LANG", "en_US")[:5]
+
+CONDICIONAL IF E ELIF
+if é usado para definir um teste e sempre usamos if junto com uma expressão
+de comparação como por exemplo 1 > 2 e neste caso teriamos a condicional:
+se 1 for maior que 2 (execute determinada instrução) traduzindo isso para código seria:
+
+if 1 > 2:
+    # faça algo aqui
+if current_language == "pt_BR":
+	msg = "Olá, Mundo!"
+elif current_language == "it_IT":
+	msg = "Ciao, Mondo!"
+elif current_language == "fr_FR":
+	msg = "Bonjour, Monde!"
