@@ -54,7 +54,7 @@ como por exemplo 1 > 2 e neste caso teriamos a condicional:
 se 1 for maior que 2 (execute determinada instrução) traduzindo isso para código seria:
 if 1 > 2:
     # faça algo aqui
-    
+        
     Exemplo:
     if current_language == "pt_BR":
         msg = "Olá, Mundo!"
@@ -62,3 +62,25 @@ if 1 > 2:
         msg = "Ciao, Mondo!"
     elif current_language == "fr_FR":
         msg = "Bonjour, Monde!"
+
+EXPRESSÃO / EXPRESSION
+Instrução é um código que você escreve e que espera um valor de retorno.
+    Exemplo:
+    1 + 1 = 2
+    8 > 10 = Falso
+    8 < 10 = Verdadeiro    
+
+DECLARAÇÃO / STATEMENT 
+Instrução que prepara o interpretador para uma determinada tarefa, mas não 
+retorna valor.
+    Exemplo: if, else, def, for, while, pass
+Observação: Geralmente um statement vem acompanhado de uma expressão. 
+            O if logo depois tem uma expressão de comparação normalmente.
+
+ATRIBUIÇÃO / ASSIGNMENT
+ Instrução que pega o retorno de uma expressão e processa o seu valor com o 
+ intuito de armazenar.
+    Exemplo: 
+    soma = 40 + 2
+    soma += 3
+    soma -= 3
