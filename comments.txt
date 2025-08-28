@@ -74,8 +74,8 @@ DECLARAÇÃO / STATEMENT
 Instrução que prepara o interpretador para uma determinada tarefa, mas não 
 retorna valor.
     Exemplo: if, else, def, for, while, pass
-Observação: Geralmente um statement vem acompanhado de uma expressão. 
-            O if logo depois tem uma expressão de comparação normalmente.
+Observação: Geralmente um statement vem acompanhado de uma expressão.
+O if logo depois tem uma expressão de comparação normalmente.
 
 ATRIBUIÇÃO / ASSIGNMENT
  Instrução que pega o retorno de uma expressão e processa o seu valor com o 
@@ -84,3 +84,20 @@ ATRIBUIÇÃO / ASSIGNMENT
     soma = 40 + 2
     soma += 3
     soma -= 3
+
+INDENTATION / IDENTAÇÃO / RECUO
+Em python um bloco de código inicia sempre que existe a presença de : no fim de
+uma linha. A linha que vem logo após o início do bloco obrigatoriamente tem que
+ter um recúo, o que chamamos de identação. Nas convenções do python não se usa 
+o tab para o recúo, é utilizado 4 espaços. Hoje a maioria dos editores já vem 
+configurado para o tab representar 4 espaços.
+
+VIRTUAL ENVIRONMENT / AMBIENTE VIRTUAL
+
+
+
+    Exemplo Linux:
+        source .venv/bin/activate
+Obs: Se for o caso, aprender como ativar o venv no Windows. 
+Dentro do mesmo caminho tem o arquivo Activate.ps1
+
