@@ -93,11 +93,38 @@ o tab para o recúo, é utilizado 4 espaços. Hoje a maioria dos editores já ve
 configurado para o tab representar 4 espaços.
 
 VIRTUAL ENVIRONMENT / AMBIENTE VIRTUAL
-
-
+Com o virtual env temos um python separado sem afetar ou ser
+afetado pelo python utilizado pelo S.O. Além disso também podemos instalar
+bibliotecas prontas e instalar ferramentas sem o risco de conflitos.
+    
 
     Exemplo Linux:
-        source .venv/bin/activate
+    1 - Criando o ambiente virtual e 2 - ativando o ambiente virtual.
+    1) python3 -m venv .venv
+    2) source .venv/bin/activate
 Obs: Se for o caso, aprender como ativar o venv no Windows. 
 Dentro do mesmo caminho tem o arquivo Activate.ps1
 
+Para saber qual é a virtual env executar which python ou
+python -m site
+(.venv) daltonlab@DaltonSoares:~/python-base$ python -m site
+sys.path = [
+  -> -> '/home/daltonlab/python-base', <- <-
+    '/usr/lib/python312.zip',
+    '/usr/lib/python3.12',
+    '/usr/lib/python3.12/lib-dynload',
+  -> -> '/home/daltonlab/python-base/.venv/lib/python3.12/site-packages', <- <-
+]
+
+PIP
+Pip é o gerenciador de pacotes do python. Os pacotes são baixados do repositório
+https://pypi.org que tem diversos projetos para serem utilizados.
+
+Antes de utilizar o pip é sempre bom fazer o upgrade do próprio pip.
+    python -m pip install --upgrade pip
+
+Para instalar uma biblioteca com o pip é como abaixo.
+    Exemplo:
+    python -m pip install ipython
+O ipython é um terminal python muito mais completo, ele é o Jupiter Notebook
+só que no terminal.
