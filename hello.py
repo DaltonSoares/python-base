@@ -39,6 +39,5 @@ elif current_language == "en_US":
 
 
 # Este programa imprime Hello World
-print(current_language)
+print("\033[31m",current_language,"\033[0m")
 print(msg)
-
