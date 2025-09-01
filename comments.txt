@@ -128,3 +128,30 @@ Para instalar uma biblioteca com o pip é como abaixo.
     python -m pip install ipython
 O ipython é um terminal python muito mais completo, ele é o Jupiter Notebook
 só que no terminal.
+
+SCALAR TYPES - TIPOS PRIMÁRIOS
+Serve para representar um único valor, ex: numero = 65.
+No python não é necessário fazer a atribuição do tipo de dado na declaração. 
+O python faz a atribuição dinâmica. Se quiser podemos utilizar mas é redundante
+numero = 65 ou numero = int(65), porém o python já reconhecendo o tipo.
+
+dir(int) digitado no terminal mostra com resultado toda a implementação.
+Os que não começam com _ são métodos públicos e podem ser chamados diretamente.
+
+float é um tipo de dados que guarda valores quebrados, como 5.5, -15,2, etc
+Para fins de aprendizado posso utilizar o float para representar dinheiro,
+porém na vida real tem outros tipos de dados como decimal e currency.
+
+bool - o Tipo boleano só tem dois valores, true ou falso.
+E ele serve para criar flags.
+False = 0 e True = 1.
+O if por exemplo usa muito o tipo de dado bool fazendo suas comparacoes 
+pois o resultado sempre será boleano.
+
+NoneType - é o tipo significa nulo, ausencia de valor.
+No python não é possível criar uma variável e não atribuir valor,
+como é feito em outras linguagens. 
+    Exemplo: 
+    In [27]: nome=None
+    In [28]: type(nome)
+    Out[28]: NoneType
