@@ -138,11 +138,11 @@ numero = 65 ou numero = int(65), porém o python já reconhecendo o tipo.
 dir(int) digitado no terminal mostra com resultado toda a implementação.
 Os que não começam com _ são métodos públicos e podem ser chamados diretamente.
 
-float é um tipo de dados que guarda valores quebrados, como 5.5, -15,2, etc
+FLOAT é um tipo de dados que guarda valores quebrados, como 5.5, -15,2, etc
 Para fins de aprendizado posso utilizar o float para representar dinheiro,
 porém na vida real tem outros tipos de dados como decimal e currency.
 
-bool - o Tipo boleano só tem dois valores, true ou falso.
+BOOL - o Tipo boleano só tem dois valores, true ou falso.
 E ele serve para criar flags.
 False = 0 e True = 1.
 O if por exemplo usa muito o tipo de dado bool fazendo suas comparacoes 
