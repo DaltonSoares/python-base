@@ -160,9 +160,10 @@ RANGE / LIST
 Para criar uma lista de com valores manualmente seria:
     base = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 Para preencher essa lista automaticamente existe o range.
-Existe uma particularidade é que o último número passado ao range tem que ser 
-1 a mais do que o que você quer na lista. Uma lista de 1 a 10 preenche (1,11)
+Particularidade é que o último número passado ao range tem que ser n+1 do que
+você quer na lista. Uma lista de 1 a 10 preenche (1,11)
     base = range(1, 11) 
+
 Para converter o range em uma lista.
     base = list(range(1,11))
 
