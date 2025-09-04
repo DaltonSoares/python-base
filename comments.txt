@@ -169,3 +169,68 @@ Para converter o range em uma lista.
 
 Lista são objetos Iterable (percorríveis), para percorrer a lista o for é usado
 
+STRING - Cadeia de caractéres
+ASCII TABLE - O sistema operacional tem essa tabela gravada. Ela só tem 127 
+posições, representando 127 caracteres e alguns tipos especiais.
+UNICODE é uma tabela universal onde vai ter todos os caracteres, 120 mil.
+e resolve a limitação do ASCII que só tinha caracteres do idioma inglês.
+Hoje a maioria das lingaguens de programação utilizam a tabela UTF-8
+que é UNICODE que tem 8 bits em cada posição.
+
+SERIALIZAÇÃO
+---
+---
+---
+
+SLICIABLE (string slicing) Fatiamento de String -
+Utiliza o dunder método __getitem__
+As strings podem ser fatiadas, ou seja, pegarmos item por item dela.
+Exemplo:
+    In [13]: list(nome)
+    Out[13]: ['B', 'r', 'u', 'n', 'o']
+               0,   1,   2,   3,   4
+
+    índice 0
+    In [14]: nome[0]
+    Out[14]: 'B'
+
+    índice 1
+    In [15]: nome[1]
+    Out[15]: 'r'
+
+    Último índice (última posição) através do -1
+    In [16]: nome[-1]
+    Out[16]: 'o'
+
+    A partir do índice 2 até o final
+    In [17]: nome[2:]
+    Out[17]: 'uno'
+
+    A partir do índice 1 até até o índice 3 (o índice 4 não é incluído)
+    In [18]: nome[1:4]
+    Out[18]: 'run'
+
+    Últimos 3 caractéres
+    In [21]: nome[-3:]
+    Out[21]: 'uno'
+
+    In [31]: len(nome)
+    Out[31]: 5    
+
+O conceito é o mesmo para listas:
+    Exemplo: 
+    Definindo a lista
+    In [22]: nomes = ["Bruno", "Ana", "Carlos", "Duda", "Eva"]
+
+    In [23]: nomes[0]
+    Out[23]: 'Bruno'
+
+    In [24]: nomes[-1]
+    Out[24]: 'Eva'
+
+    In [25]: nomes[2:]
+    Out[25]: ['Carlos', 'Duda', 'Eva']
+
+    In [26]: nomes[1:4]
+    Out[26]: ['Ana', 'Carlos', 'Duda']
+
