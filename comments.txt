@@ -177,6 +177,51 @@ e resolve a limitação do ASCII que só tinha caracteres do idioma inglês.
 Hoje a maioria das lingaguens de programação utilizam a tabela UTF-8
 que é UNICODE que tem 8 bits em cada posição.
 
+    Exemplos de alguns métodos que podem ser usados com strings:
+    In [7]: nome="dalton soares"
+
+    In [8]: nome.upper()
+    Out[8]: 'DALTON SOARES'
+
+    In [9]: nome.lower()
+    Out[9]: 'dalton soares'
+
+    In [10]: nome.capitalize()
+    Out[10]: 'Dalton soares'
+
+    In [11]: nome.title()
+    Out[11]: 'Dalton Soares'
+
+    In [12]: nome.split()
+    Out[12]: ['dalton', 'soares']
+
+    In [13]: nome.startswith("d")
+    Out[13]: True
+
+    In [14]: nome.endswith("a")
+    Out[14]: False
+
+    In [15]: nome.count("a")
+    Out[15]: 2
+
+    In [16]: nome.index("a")
+    Out[16]: 1
+
+    In [17]: nome.index("s")
+    Out[17]: 7
+
+    In [18]: nome[5]
+    Out[18]: 'n'
+
+    In [19]: len(nome)
+    Out[19]: 13
+
+    In [21]: sorted(nome)
+    Out[21]: [' ', 'a', 'a', 'd', 'e', 'l', 'n', 'o', 'o', 'r', 's', 's', 't']
+
+    In [23]: list(reversed(nome))
+    Out[23]: ['s', 'e', 'r', 'a', 'o', 's', ' ', 'n', 'o', 't', 'l', 'a', 'd']
+
 SERIALIZAÇÃO
 ---
 ---
@@ -233,4 +278,6 @@ O conceito é o mesmo para listas:
 
     In [26]: nomes[1:4]
     Out[26]: ['Ana', 'Carlos', 'Duda']
+
+
 
