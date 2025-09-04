@@ -281,3 +281,105 @@ O conceito é o mesmo para listas:
 
 
 
+CONCATENAÇÃO 
+
+    In [32]: nome
+    Out[32]: 'Maria'
+
+    In [33]: saldo
+    Out[33]: 30.0
+
+    Dessa forma o texto e as variáveis são concatenados através do "+".
+    Como a variável saldo é do tipo float, foi necessário converte-lá para str
+    In [34]: "O saldo do " + nome + " é total de " + str(saldo)
+    Out[34]: 'O saldo do Maria é total de 30.0'
+
+CONCATENAÇÃO %s
+É utilizado para logging pois a biblioteca de logs é muito antiga e ela não 
+atualizou para o str.format p/ não quebrar programas que já usam dessa maneira.
+
+
+STR.FORMAT {}
+É muito utilizado para mensagens longas, e-mail
+New style
+srt.format()
+msg = "Olá, {} você é o player n {} e você tem {} pontos"
+
+msg.format("Bruno", 2, 987.2)
+'Olá, Bruno você é o player n 2 e você tem 987.2 pontos'
+
+NOMEPANDO O PLACEHOLDER
+Para não correr o risco de haver confusão na ordem dos parâmetros é possível
+nomear os parâmetros e ao formatar informar o nome do parâmetro e  o valor.
+    msg = "Olá, {nome} você é o player n {num} e você tem {pontos} pontos"
+
+Utilizando as duas maneiras abaixo o output será o mesmo pois foi utilizado
+o placeholder nomeado.
+    msg.format(nome="dalton", num=2, pontos=85.3)
+    msg.format(num=2, pontos=85.3, nome="dalton")
+        Out: 'Olá, dalton você é o player n 2 e você tem 85.3 pontos'
+
+Formatando os espaços que receberão os dados.
+    In [24]: msg = "Olá, {} você é o player n {:03d} e você tem {:.2f} pontos"
+
+    In [25]: msg.format("Dalton", 2, 85.5)
+    Out[25]: 'Olá, Dalton você é o player n 002 e você tem 85.50 pontos'
+
+    {:03d} - O campo vai receber um digito inteiro e terá 3 casas.
+    você é o player n 002
+
+    {:.2f} - O campo vai receber um float e terá 2 casas depois da vírgula
+    você tem 85.50 pontos
+
+Pode-se também nomear E formatar o placeholder.
+    In [115]: msg = "Você tem {pontos:.03f}"
+
+    In [116]: msg.format(pontos=85.2)
+    Out[116]: 'Você tem 85.200'    
+
+Format para CENTRALIZAR
+#A str passada será centralizada em 11 caracteres.
+    In [7]: msg = "Olá, {:^11}"
+
+    In [8]: msg.format("Dalton")
+    Out[8]: 'Olá,   Dalton   ' 
+
+    Alinhando à esquerda
+    In [48]: "{:<20}".format("Dalton")
+    Out[48]: 'Dalton              '
+
+    Alinhando à direita
+    In [49]: "{:>20}".format("Dalton")
+    Out[49]: '              Dalton'
+
+Preenchendo valores nos espaços em branco do alinhamento:
+    In [61]: "{:_^20}".format("Dalton")
+    Out[61]: '_______Dalton_______'
+
+    In [62]: "{:_>20}".format("Dalton")
+    Out[62]: '______________Dalton'
+
+    In [63]: "{:_<20}".format("Dalton")
+    Out[63]: 'Dalton______________'
+    Obs: Isso pode ser utilizado para gerar títulos no terminal.
+
+
+F-STRINGS - format strings
+Utilizado em mensagens, print, error, etc.
+f-string é bem similar com as outras formas de formatação porém sempre precisa
+ter um nome no placeholder e esses nomes já precisam estar definidos.
+
+    In [122]: nome = "Joao"
+
+    In [123]: saldo = 89
+
+    In [124]: f"Olá {nome} você tem {saldo}"
+    Out[124]: 'Olá Joao você tem 89'
+
+    Da mesma maneira também é possível formatar, veja o saldo.
+    In [125]: f"Olá {nome} você tem {saldo:.2f}"
+    Out[125]: 'Olá Joao você tem 89.00'
+
+
+Em https://pyformat.info tem mais informações ou help('FORMATTING')
+
