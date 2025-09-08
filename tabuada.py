@@ -22,22 +22,14 @@
 __version__ = "0.1.1"
 __author__ = "Dalton"
 
-template = """
----Tabuada do {numero}---
-         
-{bloco:^18}
-
-###################
-"""
-
 #numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # range cria uma se
 numeros = list(range(1,11))
 
 # para cada numero em numeros:
 for n1 in numeros:
-    bloco = ""
+    print("{:-^25}".format(f"Tabuada do {n1}"))
+    print()
     for n2 in numeros:
         resultado = n1 * n2
-        bloco += f"{n1} x {n2} = {resultado}\n"
-    print(template.format(numero=n1, bloco=bloco))
+        print("{:^18}".format(f"{n1} x {n2} = {resultado}\n"))
