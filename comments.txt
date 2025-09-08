@@ -383,3 +383,104 @@ ter um nome no placeholder e esses nomes já precisam estar definidos.
 
 Em https://pyformat.info tem mais informações ou help('FORMATTING')
 
+TIPOS COMPOSTOS
+
+# Tuple ou Tupla em português
+dados = "Bruno", 15, True, None, 45.3
+A tupla é imutável, não é possível alterar os objetos da tupla.
+Assim como na string pode-se acessar seus elementos usando []
+dados[0] traz a string Bruno
+dados[1] traz o número 15
+
+Desempacotamento
+dados = "Bruno", 15, True, None, 45.3
+nome, numero, verifica, define, pontos = dados
+Assim, cada variável automaticamente recebe o valor contido na tupla.
+
+info = "bruno", "dalton", "soares", "thiago"
+a, *nome, c = info
+Da mesma maneira que acima, automaticamente os valores foram atribuídos
+as variáveis porem com a diferença de que *nome recebeu os valores
+"dalton", "soares" 
+In [33]: nome
+Out[33]: ['dalton', 'soares']
+
+LISTA
+A lista pode ser criada vazia.
+    users = []
+Método append adiciona itens na última posição da lista.
+    In [36]: users.append("João")
+
+    In [37]: users.append("Bruno")
+
+    In [38]: users.append("Alice")
+
+    In [39]: users
+    Out[39]: ['João', 'Bruno', 'Alice']
+
+Utilizando o insert eu posso escolher a posição que vou adicionar na lista
+    In [40]: users.insert(0, "Miguel")
+
+    In [41]: users
+    Out[41]: ['Miguel', 'João', 'Bruno', 'Alice']
+
+Revemo para remover alguém da lista. 
+    In [43]: users.remove("Alice")
+
+    In [44]: users
+    Out[44]: ['Miguel', 'João', 'Bruno']
+
+É possível fazer a junção de duas listas.
+    In [52]: users
+    Out[52]: ['Miguel', 'João', 'Bruno']
+
+    In [53]: outra_lista
+    Out[53]: ['Yumi', 'Dalton']
+
+    In [54]: users + outra_lista
+    Out[54]: ['Miguel', 'João', 'Bruno', 'Yumi', 'Dalton']    
+As duas listas users e outra_lista continuam intactas e inalteradas.
+
+In [59]: head, *body, tail = lista_completa
+
+    In [60]: head
+    Out[60]: 'Miguel'
+
+    In [61]: body
+    Out[61]: ['João', 'Bruno', 'Yumi']
+
+    In [62]: tail
+    Out[62]: 'Dalton'
+
+Com o método extend é o join de uma lista na outra.
+    In [65]: users
+    Out[65]: ['Miguel', 'João', 'Bruno']
+
+    In [66]: outra_lista
+    Out[66]: ['Yumi', 'Dalton']
+
+    In [67]:
+
+    In [67]: users.extend(outra_lista)
+
+    In [68]: users
+    Out[68]: ['Miguel', 'João', 'Bruno', 'Yumi', 'Dalton']
+    Da mesma maneira que o extend daria para utilizar o += 
+    users += outra_lista
+
+O método POP remove o último elemento da lista
+
+    In [69]: users
+    Out[69]: ['Miguel', 'João', 'Bruno', 'Yumi', 'Dalton']
+
+    In [71]: users.pop()
+    Out[71]: 'Dalton'
+
+    In [72]: users.pop()
+    Out[72]: 'Yumi'
+
+    In [73]: users.pop()
+    Out[73]: 'Bruno'
+
+    In [74]: users
+    Out[74]: ['Miguel', 'João']
