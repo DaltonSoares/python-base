@@ -549,3 +549,122 @@ Adicionando valores ao set
 # Hash Table
 Buscar coisas dentro de um set é muito mais rápido que em uma lista pois é 
 implementado Hash Table no set. 
+
+Nós vimos as seguintes sequencias: tuple, list, set, str
+RESUMO: 
+    minha_lista = [1, 2, 3, 4, 5]
+    minha_tupla = (1, 2, 3, 4, 5)
+    meu_set = {1, 2, 3, 4, 5, 3} ou meu_set = set((1, 2, 3, 4, 5, 3))
+
+DICIONÁRIO
+O dicionário tem características parecidas com a lista o set.
+Ele é mutável, pode ser iterado, tem a hash table para ter buscas rápidas.
+Ao invés de qualquer apenas um valor por posição, ele guarda dois valores:
+key -> value em cada posição: cod -> 1, nome -> Bruno.
+
+Criando um dicionário
+    In [24]: cliente = {"nome": "Bruno", "cod": 123}
+
+    Usa-se a chave para acessar valores em um dicionário.
+    In [25]: cliente["nome"]
+    Out[25]: 'Bruno'
+
+    In [26]: cliente["cod"]
+    Out[26]: 123
+
+    In [36]: cliente["cidade"] = "Viana"
+
+    Adicionando mais uma chave:valor ao cliente
+    In [36]: cliente["cidade"] = "Viana"
+    In [37]: cliente
+    Out[37]: {'nome': 'Bruno', 'cod': 123, 'cidade': 'Viana'}
+    
+    Poderia também fazer assim:
+    In [56]: cliente.update({"idade": 36})
+    In [57]: cliente
+    Out[57]: {'nome': 'Bruno', 'cod': 123, 'pais': 'Portugal', 'idade': 36}
+
+    Atualizar um valor no dicionário
+    cliente["cidade"] = "Santo André"
+
+    Removendo um valor do dicionário através da chave.
+    In [38]: del cliente["nome"]
+
+    In [39]: cliente
+    Out[39]: {'cod': 123, 'cidade': 'Viana'}
+
+    Buscar no dicionário via chave é muito rápido por causa do hash table.
+    In [43]: "cod" in cliente
+    Out[43]: True
+
+    In [44]: "nome" in cliente
+    Out[44]: True
+
+    Buscando as chaves
+    In [46]: cliente.keys()
+    Out[46]: dict_keys(['nome', 'cod'])
+
+    Buscando os valores
+    In [47]: cliente.values()
+    Out[47]: dict_values(['Bruno', 123])
+
+    Retorna chave e valor no formato de dupla.
+    In [50]: cliente.items()
+    Out[50]: dict_items([('nome', 'Bruno'), ('cod', 123)])
+
+    Atualizando um dicionário com base em outro.
+    In [52]: extra = {"pais": "Portugal"}
+
+    In [53]: cliente.update(extra)
+
+    In [54]: cliente
+    Out[54]: {'nome': 'Bruno', 'cod': 123, 'pais': 'Portugal'}
+
+    Desempacotamento no dicionário, para o Desempacotamento no dicionário
+    precisa ser passado dois *.
+    extra_cliente = {**extra, **cliente}
+
+    Já havíamos utilizado o desempacotamento em listas.
+    atividade = ['ingles', 'musica', 'danca', 'musculacao']
+    head, *body, tail = atividade
+    O body tem só um * porque funciona para sequencias que tenha um único
+    elemento em cada posição. 
+    O dicionário contém dois elementos por posição, por isso o uso de **
+
+Para iterar em um dicionário:
+Pegando somente a chave (que é mais rápido pois tem o hash)
+cliente = {'nome': 'Bruno', 'cod': 123, 'pais': 'Portugal'}
+
+    In [88]: for chave in cliente:
+        ...:     print(chave)
+        ...:
+    nome
+    cod
+    pais  
+Pegando chave e o valor 
+In [89]: for chave in cliente:
+    ...:     print(chave, "->", cliente[chave])
+    ...:
+nome -> Bruno
+cod -> 123
+pais -> Portugal
+
+Outra forma de fazer é pegando o .items pois ele retornará uma tupla.
+    In [111]: for chave, valor in cliente.items():
+        ...:     print(chave, '->', valor)
+        ...:
+    nome -> Bruno
+    cod -> 123
+    pais -> Portugal
+
+Mais um exemplo, também usando o desacoplamento.
+    In [114]: nome, cod, pais = cliente.items()
+
+    In [115]: nome
+    Out[115]: ('nome', 'Bruno')
+
+    In [116]: cod
+    Out[116]: ('cod', 123)
+
+    In [117]: pais
+    Out[117]: ('pais', 'Portugal')
