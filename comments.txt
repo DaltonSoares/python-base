@@ -484,3 +484,68 @@ O método POP remove o último elemento da lista
 
     In [74]: users
     Out[74]: ['Miguel', 'João']
+
+SET / CONJUNTO 
+set é um conjunto de itens únicos, ou seja, não duplicados.
+Criando um set porém não é a melhor pois pode ser confundida com dicionário.
+c1 = {1, 2, 3} 
+
+O jeito preferido é usar a própria classe set.
+Dentro do set pode-se passar um objetivo iterável.
+c1 = set()
+c1 = set((1, 2, 3))
+
+Se achar que está estranho com os parenteses duplos dá para criar via lista.
+c1 = set([1, 2, 3])
+
+UNIÃO DE CONJUNTOS
+    Lembrando que o set não tem itens repetidos.
+    In [15]: set(conjunto_a) | set(conjunto_b)
+    Out[15]: {1, 2, 3, 4, 5, 6, 7, 8}
+
+    Outra maneira de fazer a mesma coisa é utilizando o método union
+    set(conjunto_a).union(set(conjunto_b))
+
+A melhor é já criando os conjuntos como SETs.
+    In [17]: conjunto_a = set([1, 2, 3, 4, 5])
+    In [18]: conjunto_b = set([4, 5, 6, 7, 8])
+
+E assim fica mais simples a união deles.
+    conjunto_a | conjunto_b
+    conjunto_a.union(conjunto_b)
+
+INTERSESSÃO DE CONJUNTOS
+    In [22]: conjunto_a.intersection(conjunto_b)
+    Out[22]: {4, 5}
+
+    In [23]: conjunto_a & conjunto_b
+    Out[23]: {4, 5}    
+
+Tudo o que está em um conjunto mas não está no outro.
+Algo parecido com left e right join dependendo de como especificado.
+    In [24]: conjunto_a - conjunto_b
+    Out[24]: {1, 2, 3}
+
+    In [25]: conjunto_a.difference(conjunto_b)
+    Out[25]: {1, 2, 3}    
+
+DIFERENÇA SIMÉTRICA
+Mostra os valores únicos do conjunto_a e os valores que só tem no conjunto_b
+In [29]: conjunto_a.symmetric_difference(conjunto_b)
+Out[29]: {1, 2, 3, 6, 7, 8}
+
+In [30]: conjunto_a ^ conjunto_b
+Out[30]: {1, 2, 3, 6, 7, 8}
+
+Os sets são objetos de transição, para que no futuro 
+consigamos fazer as operações de maneira mais fácil.
+
+Adicionando valores ao set
+    In [31]: conjunto_a.add(10)
+
+    In [32]: conjunto_a
+    Out[32]: {1, 2, 3, 4, 5, 10}
+
+# Hash Table
+Buscar coisas dentro de um set é muito mais rápido que em uma lista pois é 
+implementado Hash Table no set. 
