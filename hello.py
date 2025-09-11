@@ -16,7 +16,7 @@ Execução:
     ./hello.py
 """
 # Dunder é uma palavra que começa com dois _ e termina com dois _
-__version__ = "0.0.1"
+__version__ = "0.1.2"
 __author__ = "Dalton Augusto Soares"
 __license__ = "Unlicense"
 
@@ -28,16 +28,26 @@ import os
 
 current_language = os.getenv("LANG", "en_US")[:5]
 
-msg = "Hola, Mundo!"
 
-if current_language == "pt_BR":
+#msg = "Hola, Mundo!"
+msg = {
+    "en_US": "Hello, World!",
+    "pt_BR": "Olá, Mundo!",
+    "it_IT": "Ciao, Mondo!",
+    "es_SP": "Hola, Mundo!",
+    "fr_FR": "Bonjour, Monde!"
+}
+
+
+
+"""if current_language == "pt_BR":
     msg = "Olá, Mundo!"
 elif current_language == "it_IT":
     msg = "Ciao, Mondo!"
 elif current_language == "en_US":
-    msg = "Hello, World!"
+    msg = "Hello, World!"""
 
 
 # Este programa imprime Hello World
-print("\033[31m",current_language,"\033[0m")
-print(msg)
+#print("\033[31m",msg["current_language"],"\033[0m")
+print(msg[current_language])
