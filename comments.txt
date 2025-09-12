@@ -668,3 +668,6 @@ Mais um exemplo, também usando o desacoplamento.
 
     In [117]: pais
     Out[117]: ('pais', 'Portugal')
+
+DAY 3
+input / output
